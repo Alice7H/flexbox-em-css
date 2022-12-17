@@ -1,5 +1,5 @@
 <p align="center">
-    <img width="300" src="./images/banner.png">
+    <img width="900" src="./images/banner.png">
 </p>
 
 # Projeto flexbox
