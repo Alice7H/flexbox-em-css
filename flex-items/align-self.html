@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fundamentos - align self</title>
+  <style>
+    .container {
+      border: 1px solid black;
+      display: flex;
+      margin-bottom: 10px;
+      max-width: 350px;
+    }
+    .align-container { align-items: center; }
+    .col { flex-direction: column; }
+    .item {
+      background-color: brown;
+      color: white;
+      text-align: center;
+      font-size: 24px;
+      margin: 5px;
+    }
+    .center { align-self: center; }
+    .start { align-self: flex-start; }
+    .end { align-self: flex-end; }
+    .baseline { align-self: baseline; }
+    .stretch { align-self: stretch; }
+    .auto { align-self: auto; }
+  </style>
+</head>
+<body>
+  <p>Estabelece o alinhamento de modo individual sobre um determinado item</p>
+  <h1>Linha</h1>
+  <p>center</p>
+  <div class="container align-container">
+    <div class="item auto">AAA</div>
+    <div class="item auto">122</div>
+    <div class="item auto">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Assumenda.</div>
+    <div class="item auto">ITEM 4</div>
+  </div>
+
+  <p>align-self: mix</p>
+  <div class="container">
+    <div class="item center">AAA</div>
+    <div class="item start">122</div>
+    <div class="item stretch">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit?</div>
+    <div class="item end">ITEM 4</div>
+  </div>
+  <div class="container">
+    <div class="item start">AAA</div>
+    <div class="item center">AAAAAAAAaaaaaaa</div>
+    <div class="item end">AAAAAaaaaaaaaaaaaaa</div>
+    <div class="item stretch">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit?</div>
+  </div>
+
+  <h1>Coluna</h1>
+  <p>center</p>
+  <div class="container align-container col">
+    <div class="item auto">AAA</div>
+    <div class="item auto">122</div>
+    <div class="item auto">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Assumenda.</div>
+    <div class="item auto">ITEM 4</div>
+  </div>
+
+  <p>align-self: mix</p>
+  <div class="container col">
+    <div class="item center">AAA</div>
+    <div class="item start">122</div>
+    <div class="item stretch">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit?</div>
+    <div class="item end">ITEM 4</div>
+  </div>
+
+  <div class="container col">
+    <div class="item start">AAA</div>
+    <div class="item center">AAAAAAAAaaaaaaa</div>
+    <div class="item end">AAAAAaaaaaaaaaaaaaa</div>
+    <div class="item stretch">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit?</div>
+  </div>
+</body>
+</html>
